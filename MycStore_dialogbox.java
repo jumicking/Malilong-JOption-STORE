@@ -22,21 +22,21 @@ public class MycStore_dialogbox {
             String response = JOptionPane.showInputDialog(null, "Would you like to buy ice cream? yes/no");
 
             main = false;
-            boolean check = false;
+            boolean choice = false;
             double totalcost = 0;
             double subtotal = 0;
 
             while (response.equalsIgnoreCase("yes")) {
 
-                String message = """ 
-                                FLAVOR \t  PRICE\t BARCODE
-                                    Mocha \t   30  \t   1 
-                                    Choco \t   25  \t   2
-                                    Vanilla\t   20  \t   3
-                                    Mango \t   35  \t   4
-                                    Ube \t    28  \t    5 """;
-                JOptionPane.showMessageDialog(null, "15% Discount for 500.00 Php worth of purchase!!!");
-                JOptionPane.showMessageDialog(null, "Input barcode number:");
+                String message =""" 
+                           FLAVOR   \t  PRICE   \t BARCODE
+                              Mocha     \t 30        \t 1
+                              Choco     \t 25        \t 2
+                              Vanilla     \t 20        \t 3
+                              Mango     \t 35        \t 4
+                              Ube          \t 28         \t 5
+                           \n 15% Discount for 500.00 Php worth of purchase!!!
+                            \n Input barcode number:""";
 
                 int input2 = Integer.parseInt(JOptionPane.showInputDialog(null, message));
 
@@ -48,35 +48,35 @@ public class MycStore_dialogbox {
                     case 1 -> {
                         price = 30;
                         productName = "Mocha";
-                        check = true;
+                        choice = true;
                     }
                     case 2 -> {
                         price = 25;
                         productName = "Choco";
-                        check = true;
+                        choice = true;
                     }
                     case 3 -> {
                         price = 20;
                         productName = "Vanilla";
-                        check = true;
+                        choice = true;
                     }
                     case 4 -> {
                         price = 35;
                         productName = "Mango";
-                        check = true;
+                        choice = true;
                     }
                     case 5 -> {
                         price = 28;
                         productName = "Ube";
-                        check = true;
+                        choice = true;
                     }
                     default -> {
                         JOptionPane.showMessageDialog(null, "Invalid choice.");
-                        check = false;
+                        choice = false;
                     }
 
                 }
-                if (check) {
+                if (choice) {
                     double quantity = Double.parseDouble(JOptionPane.showInputDialog(null, "You selected: " + productName + "\n cost: PHP " + price + "\n Enter quantity:"));
                     subtotal = price * quantity;
                     totalcost += subtotal;
