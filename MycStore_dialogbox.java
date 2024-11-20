@@ -1,20 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package myc.store_dialogbox;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Abram
- */
 public class MycStore_dialogbox {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         boolean main = true;
         while (main) {
